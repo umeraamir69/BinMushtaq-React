@@ -1,0 +1,12 @@
+.background {
+  background-image: url('./ContactBnr.jpg');
+}
+
+
+.backfrm {
+  background-image: url('../../public/images/map.png');
+}
+
+.dotside {
+  background-image: url('../../public/images/dotside.svg');
+}
