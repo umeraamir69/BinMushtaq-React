@@ -34,8 +34,16 @@ export default function Navbar() {
                             <h1 className="md:w-4/12 font-bold text-red-700  font-serif cursor-pointer  " aria-label="the Crib.">
                                 <Link to="/" className="flex items-center  text-sm " onClick={top}>
                                     <img src="/images/logonav.png" className="w-9 h-9  object-fill lg:w-12 lg:h-14 " alt="Bin Mushtaq international" />
-                                    <span className="md:flex hidden">Bin Mushtaq   International</span>
-                                    <span className="flex md:hidden">Bin Mushtaq <br />  International</span>
+                                    <div className="md:flex flex-col  pt-2 hidden">
+                                    <span>Bin Mushtaq   International</span>
+                                   <span className=" text-xs "> The Global Connection</span>
+                                   
+                                   </div>
+
+                                    <div className="flex flex-col md:hidden">
+                                    <span>Bin Mushtaq   International</span>
+                                    <span className=" text-xs "> The Global Connection</span>
+                                    </div>
                                 </Link>
                             </h1>
 
