@@ -63,7 +63,14 @@ const Footer = () => {
                                 <dd className="text-xs text-gray-500">Office 8, Safdar Mansion, Blue Area Islamabad, <br />Islamic Republic of Pakistan</dd>
                             </div>
 
+                            <div className="w-full ">
+                            <dt className="text-sm font-medium text-gray-800">INDONESIA Office</dt>
+                            <dd className="text-xs text-gray-500">Jl. KH. Wahid Hasyim, Pontianak, Kalimantan Barat <br/> Republic of Indonesia</dd>
                         </div>
+
+
+                        </div>
+
 
                     </div>
                 </div>
