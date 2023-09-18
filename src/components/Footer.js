@@ -55,7 +55,7 @@ const Footer = () => {
 
                             <div className="w-full ">
                                 <dt className="text-sm font-medium text-gray-800">KENYA Office</dt>
-                                <dd className="text-xs text-gray-500">P.O Box 00100 Central Nairobi <br />Republic of Kenya</dd>
+                        <dd className="text-xs text-gray-500">P.O Box 00100 Central Nairobi <br />Republic of Kenya</dd>
                             </div>
 
                             <div className="w-full ">

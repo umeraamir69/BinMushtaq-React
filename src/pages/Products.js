@@ -175,7 +175,104 @@ const data = [
         country: "Kenyan",
         type: "Herbs",
         Packing: "100g x 12 IN BOX"
-    }
+    },
+
+
+    {
+        image: "Mangosteen.jpeg",
+        name: "Mangosteen",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "Rambutan.jpeg",
+        name: "Rambutan",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "Salak.jpeg",
+        name: "Salak",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "Dragon.jpeg",
+        name: "Dragon Fruit",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "Soursop.jpeg",
+        name: "Soursop",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "Turmeric.jpeg",
+        name: "Turmeric",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "Galangal.jpeg", 
+        name: "Galangal",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "LemonGrass.jpeg", 
+        name: "LemonGrass",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "Banana.jpeg", 
+        name: "Banana Leaf",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "Pandan.jpeg", 
+        name: "Pandan Leaf",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "Lemon.jpeg", 
+        name: "Lemon Leaf",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    {
+        image: "TurmericL.jpeg", 
+        name: "Turmeric Leaf",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    
+    {
+        image: "Salam.jpeg", 
+        name: "Salam Leaf",
+        country: "Indonesia",
+        type: "Herbs",
+        Packing: "100g x 12 IN BOX"
+    },
+    
+
+
 ]
 
 
@@ -185,17 +282,21 @@ const Products = () => {
 
     const pakRef = useRef();
     const kenRef = useRef();
+    const indRef = useRef();
     const [pak, setPak] = useState(0)
     const [ken, setken] = useState(0)
+    const [ind, setind] = useState(0)
 
 
 
     const getElementPosition = () => {
         const pak = pakRef.current
         const ken = kenRef.current
-        if (pak && ken) {
+        const ind = indRef.current
+        if (pak && ken && ind) {
             setPak(pak.getBoundingClientRect())
             setken(ken.getBoundingClientRect())
+            setind(ind.getBoundingClientRect())
         }
     };
 
@@ -240,6 +341,21 @@ const Products = () => {
                             {data
                                 .filter(function (el) {
                                     return el.country === "Pakistani";
+                                })
+                                .map((data, index) => (
+                                    <ProductCrad data={data} key={index} pack={false} />
+                                ))}
+                        </div>
+
+
+                        <h1 ref={indRef} className="mb-4  mt-20  py-10text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl">Fresh Products from
+                        INDONESIA
+
+                        </h1>
+                        <div className=" grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-y-12 lg:gap-x-8 sm:gap-y-10 sm:gap-x-6 gap-y-6 lg:mt-12 mt-10">
+                            {data
+                                .filter(function (el) {
+                                    return el.country === "Indonesia";
                                 })
                                 .map((data, index) => (
                                     <ProductCrad data={data} key={index} pack={false} />
